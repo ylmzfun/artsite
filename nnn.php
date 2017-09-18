@@ -8,5 +8,8 @@
 
 class nnn
 {
+    public  function one(){
+
+    }
 
 }
