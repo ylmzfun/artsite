@@ -1,0 +1,351 @@
+	/*清除body默认样式*/
+
+		@font-face{
+			font-family: 'font';
+			src:url('fonts/STHeiti Medium.ttc');
+		}
+
+		body{	
+			font-family: 'font';
+		}
+
+		body,ul,li,p,dl,dd,dt,h4,h6{
+			margin: 0;
+			padding: 0;
+			font-family: "cooly";
+			list-style: none;
+		}
+
+		a{
+			text-decoration: none;
+			color:#000;
+		}
+	
+
+		header ul li:nth-child(1):before{
+			margin-right:5px;
+			content: "\e900";
+		}
+
+		header ul li:nth-child(2):before{
+			margin-right:5px;
+			content: "\e921";
+		}
+
+		header ul li:nth-child(3):before{
+			margin-right:5px;
+			content: "\e916";
+		}
+
+		header ul li:nth-child(4):before{
+			margin-right:5px;
+			content: "\e91c";
+		}
+
+		header ul li:nth-child(5):before{
+			margin-right:5px;
+			content: "\e942";
+		}
+
+
+		
+		header .left li:hover{
+				color:#f00;
+			}
+
+
+		header .right li:hover{
+		}
+
+		
+		/*/主体／*/
+
+		article{
+				width: 100%;
+				
+				background: rgba(55,55,55,0.2);   
+				color: #000;
+			}
+
+		/*小屏幕 宽度最大为439px */
+		@media only screen and (max-width: 439px){
+			body{	
+				background:  url(../image/logo150px.png)  center 200px no-repeat;
+				font-size: 12px;
+			}
+		
+
+			header{
+				position: fixed;
+				left: 0;
+				top:10px;
+				/*border:1px solid red;*/
+			}
+
+			header ul{
+				/*display: none;*/
+			}
+			
+			header ul li{
+				width: 100px;
+				height: 20px;
+				width: 100px;
+				margin: 2%;
+			}
+
+			header .right{
+				display: none;
+			}
+
+			#button {
+				width: 50px;
+				height:30px;
+				line-height: 30px;
+				text-align: center;
+				border-radius: 10px;
+				border:1px solid #999;
+			}
+
+			#button:before{
+				content: '\e900';
+			}
+			
+			#button:hover +ul{
+				display: block;
+			}
+
+			
+		}
+
+
+		/*中等尺寸  宽度最小为400px和最大为799px */
+		@media screen and (min-width: 440px)and (max-width: 799px) {
+			body{	
+				background:  url(../image/logo200px.png)  center 200px no-repeat;
+				font-size: 14px;
+			}
+			
+
+			/*header .right{
+				display: none;
+			}*/
+			#button{
+				display: none;
+			}
+			header .left li{
+			float: left;
+			margin-left: 2%;
+			text-shadow: 3px 3px 3px #999;	
+			}
+
+			header .right li{
+			float: right;
+			margin-right: 2%;
+			text-shadow: 3px 3px 3px #999;	
+			}
+			
+			header .right{
+				display: none;
+			}
+
+		}
+
+		/*大尺寸 最小宽度为800px */
+		@media screen and (min-width: 800px) {
+			body{	
+				background:  url(../image/logo.png)  center 200px no-repeat;
+				font-size: 18px;
+				background-attachment: fixed;
+			}
+			
+			/*头部*/
+			header{
+				width: 100%;
+				height: 80px;
+				line-height: 80px;
+			}
+			
+			#button{
+				display: none;
+			}
+
+			header .left li{
+				float: left;
+				margin-left: 2%;
+				text-shadow: 3px 3px 3px #999;			
+			}
+
+			header .right li{
+			float: right;
+			margin-right: 2%;
+			text-shadow: 3px 3px 3px #999;	
+			}
+
+			#weixin:before{
+				margin-right:5px;
+				content: '\e9ae';
+			}
+
+			#weibo:before{
+				margin-right:5px;
+				content: '\e96b';
+			}
+			 #weixin,#weibo{
+				position: relative;
+				cursor: pointer;
+			}
+
+		    #weixin img,#weibo img{
+				width: 200px;
+				height: 250px;
+				position: absolute;
+				top:80px;
+				right:10px;
+				display: none;
+			}
+			
+			#weixin:hover,#weibo:hover{
+				color:red;
+			}
+			#weixin:hover img,#weibo:hover img{
+				display: block;
+			}
+
+			/*index主体*/
+			.index{
+				width: 100%;
+
+			}
+			.main{
+				width: 100%;
+				height:600px;
+				margin: 0 auto;
+				padding:5px;
+			}
+			
+			.main .banner{
+				width: 100%;
+				overflow: hidden;
+				height: 400px;
+			}
+
+			.main .banner li{
+				float: left;
+				width: 100%;
+				height: 400px;
+			}
+
+			.main .banner li img{
+				width: 100%;
+				height: 100%;
+			}
+
+			.main .content dd{
+				width: 100%;
+				height: 200px;
+				background: #f00;
+				float: none;
+			}
+
+			.main .content dt{
+				font-size:30px;
+			}
+
+
+			/*works主体*/
+			article dl{
+				width: 80%;
+				/*border:1px solid red;*/
+				margin: 20px auto;
+			}
+
+			
+			
+			article dl dd{
+				width:23%;
+				float: left;
+				margin: 1%;
+			}
+			
+			article dd img{
+				/*border: 1px solid red;*/
+				width: 100%;
+				height: 300px;
+				border-top-right-radius: 15px;
+				border-top-left-radius: 15px;
+			}
+			
+			article dd .info{
+				background: #eee;
+				border-bottom-right-radius: 15px;
+				border-b-left-radius: 15px;
+			}
+			
+			article .info h4{
+				text-indent: 1em;
+				padding: 10px auto;
+			}
+
+			article .info p.intr{
+				font-size: 12px;
+				text-indent: 1em;
+				
+			}
+
+
+
+			article .info button{
+				width: 50px;
+				height: 20px;
+				margin: 0 5px;
+			}
+
+			article .info .charge{
+				float: right;
+			}
+			
+			article .mark{
+				width: 80%;
+				margin: 0 auto;
+				padding:5px ;
+			}
+
+			article .mark span{
+				font-size: 10px;
+				display: inline-block;
+				width: 10%;
+				text-align: center;
+				padding:3px;
+				margin: 2px;
+				border: 1px solid red;
+				border-radius: 10px;
+			}
+
+			article .page{
+				clear: both;
+				text-align: center;
+				padding: 10px auto;
+			}
+
+			article .page a{
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background:#fff;
+				margin: 5px;
+				text-align: center;
+			}
+
+		}
+
+		/*底部*/
+		footer{
+			clear: both;
+			width: 100%;
+			padding-top:10px;
+			
+		}
+		
+		footer p{
+			text-align: center;
+		}
